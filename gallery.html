@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 10px;
+      }
+
+      .container {
+        border: 1px solid gray;
+        height: 150px;
+        width: 150px;
+      }
+
+      .image {
+        height: 150px;
+        width: 150px;
+        position: relative;
+        color: gold;
+        font-weight: bold;
+      }
+
+      .image--blue {
+        background-color: blue;
+      }
+
+      .image--red {
+        background-color: red;
+      }
+
+      .image--gold {
+        background-color: gold;
+      }
+
+      .image--purple {
+        background-color: purple;
+      }
+
+      .image--crimson {
+        background-color: crimson;
+      }
+
+      .image--green {
+        background-color: green;
+      }
+      .image--black {
+        background-color: black;
+      }
+      .image--orangered {
+        background-color: orangered;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(192, 192, 192, 0.6);
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+      }
+
+      .image:hover .overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image image--blue">
+        <div class="overlay">This is good practice</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--green">
+        <div class="overlay">If I keep pushing, I'll make it happen</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--red">
+        <div class="overlay">I need to maintain focus and momentum</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--gold">
+        <div class="overlay">I cannot keep getting distracted</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--purple">
+        <div class="overlay">Never forget why you started</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--crimson">
+        <div class="overlay">Keep the goal in the forefront of your mind</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--black">
+        <div class="overlay">You are building the skills to become a developer</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="image image--orangered">
+        <div class="overlay">You ARE a developer</div>
+      </div>
+    </div>
+  </body>
+</html>
