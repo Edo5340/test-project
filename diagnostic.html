@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .login__button {
+    background-color: blue;
+    color: white;
+    border: none;
+    height: 21px;
+    width: 65px;
+  }
+</style>
+
+<body>
+
+  <div class="container__login">
+    <label for="login">Login:</label>
+    <input id="login" type="email" placeholder="Enter Email Address">
+    <button id="btn" class="login__button" type="submit">Submit</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById('btn');
+    
+    btn.addEventListener('click', function() {
+      const email = document.getElementById('login').value;
+      const userName = 'Difficult'
+      
+      if (email === userName) {
+        return console.log('Correct')
+      } else {
+        return console.log('Incorrect');      
+    }})
+  </script>
+</body>
+</html>

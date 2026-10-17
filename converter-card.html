@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+      }
+      .converter__container {
+        background-color: gold;
+        font-weight: bold;
+        max-width: 360px;
+        width: 100%;
+        border: solid thin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+
+      .converter__button {
+        background-color: crimson;
+        color: white;
+        width: 75px;
+        height: 25px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .converter__message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="converter__container">
+      <div class="converter__input-container">
+        <label for="degrees">Degrees:</label>
+        <input type="number" id="degrees" placeholder="Enter Temperature" />
+      </div>
+      <div class="converter__input-container">
+        <label for="celsius">Celsius:</label>
+        <input type="number" id="celsius" readonly />
+      </div>
+      <button class="converter__button" id="btn">Convert</button>
+      <p class="converter__message" id="templit"></p>
+    </div>
+
+    <script>
+      const sentence1 = "This is not a number!";
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", function () {
+        const input = document.getElementById("degrees").value;
+        const num = Number(input);
+
+        if (input === "" || isNaN(num)) {
+          document.getElementById("templit").textContent = sentence1;
+          document.getElementById("celsius").value = "";
+        } else {
+          const celsiusOutput = ((num - 32) * 5) / 9;
+          const celsiusRounded = celsiusOutput.toFixed(2);
+          document.getElementById("celsius").value = celsiusRounded;
+          const sentence = `${num} degrees fahrenheit is equal to ${celsiusRounded} degrees celsius!`;
+          document.getElementById("templit").textContent = sentence;
+        }
+      });
+    </script>
+  </body>
+</html>

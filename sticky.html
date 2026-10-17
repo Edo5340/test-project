@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      height: 3000px;
+      border: gray 1px solid;
+      position: relative;
+    }
+
+    .header {
+      position: sticky;
+      border: solid 1px blue;
+      background-color: rgb(76, 137, 248);
+      height: 60px;
+      top: 0;
+    }
+
+    .button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+      background-color: green;
+      color: white;
+      visibility: hidden;
+      opacity: 0;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    #button.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+
+  <body>
+    <div class="container" id="container">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <div class="header">Sticky Header</div>
+      <button class="button" id="button">Back to top</button>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+        quos architecto iure neque aperiam, libero ratione ipsa suscipit odit
+        quis minima minus, commodi totam nam possimus tenetur facilis est illo.
+      </p>
+    </div>
+
+    <script>
+      const scrollButton = document.getElementById("button");
+
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 500) {
+          scrollButton.classList.add("show");
+        } else {
+          scrollButton.classList.remove("show");
+        }
+      });
+
+      scrollButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
